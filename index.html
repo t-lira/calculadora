@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link favicon-->
+  <link rel="shortcut icon" href="assets/image/favicon/icons.ico" type="image/x-icon">
+  <title>Calculadora</title>
+  <!--link css-->
+  <link rel="stylesheet" href="assets/css/index-style.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <main class="main">
+    <!-- Main section for the calculator -->
+    <section class="main--section">
+    <!-- Main container -->
+      <div class="main--container">
+        <!-- Background image section -->
+        <div  id="content-box--image">
+          <!-- Image content in CSS -->
+        </div>
+
+        <!-- Text box and form -->
+        <div id="content-box--text">
+          <!-- Form title -->
+          <h2 class="form--title">
+            Calculadora
+          </h2>
+          <!-- Form subtitle -->
+          <p class="form--subtitle">
+            Desenvolvida para simplificar a manutenção da sua piscina, oferecemos uma ferramenta prática e eficiente para que você tenha controle total sobre a quantidade de produtos para o tratamento da agua.
+          </p>
+          <!-- Form for product selection and pool size input -->
+          <form class="form">
+            <!-- Product selection dropdown -->
+            <label for="select_products">SELECIONE O PRODUTO</label> 
+            <select name="select" id="select_products" class="select" >
+              <!-- Product options -->
+              <option value="">Selecione</option>
+              <option value="clarificante"  id="clarificante">
+                 GENCO® Clarificante e Auxiliar de Filtração
+              </option>
+              <option value="algicida_choque" id="algicida_choque">
+                GENCO® ALGICIDA DE CHOQUE
+              </option>
+              <option value="algicida_manutencao" id="algicida_manutencao">
+                GENCO® ALGICIDA DE MANUTENÇÃO
+              </option>
+              <option value="algicida_cobre" id="algicida_cobre">
+                GENCO® ALGICIDA SEM COBRE
+              </option>
+              <option value="sulfato_aluminio" id="sulfato_aluminio">
+                GENCO® Sulfato de Alumínio 
+              </option>
+              <option value="cloro_granulado" id="cloro_granulado">
+                GENCO® L.E. Cloro Granulado Múltipla Ação 3 em 1
+              </option>
+              <option value="cloro_estabilizado" id="cloro_estabilizado">
+                GENCO® GENCLOR Cloro Granulado Estabilizado
+              </option>
+              <option value="cloro_poll-trat" id="cloro_poll-trat">
+                GENCO® POOL-TRAT Cloro Granulado
+              </option>
+              <option value="ph_granulado" id="ph_granulado">
+                GENCO® PH CERTO Granulado Estabilizante de PH
+              </option>
+              <option value="ph_mais-granulado" id="ph_mais-granulado">
+                GENCO® PH + MAIS Granulado Barrilha
+              </option>
+              <option value="ph_menos-liquido" id="ph_menos-liquido">
+                GENCO® PH - MENOS Líquido
+              </option>
+              <option value="ph_mais-liquido" id="ph_mais-liquido">
+                GENCO® PH + MAIS Líquido
+              </option>
+            </select>
+            <!-- Pool volume input -->
+            <label for="pool_size">QUAL O VOLUME DA SUA PISCINA?</label>
+            <input type="text" id="pool_size" class="input">
+            <!-- Additional text with a link -->
+            <p class=""> Não sabe? <a href="services.html" class="footer--link"> calcule o volume da sua piscina</a>
+            </p>
+  
+            <!-- Submit button -->
+            <div class="button--form">
+              <input type="button" value="CALCULAR" class="btn" onclick="calculateProducts()">
+            </div>
+          </form>
+          <p class="txt--quantity" id="quantity_of_products--max"></p>
+          <p class="txt--quantity" id="quantity_of_products--min"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Importando Scripts -->
+  <script src="assets/script/productQuantities.js"></script>
+  
+</body>
+</html>
